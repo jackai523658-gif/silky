@@ -8,4 +8,9 @@
       <ProjectReference Include="..\Lms.Core\Lms.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Message" />
+      <Folder Include="Support" />
+    </ItemGroup>
+
 </Project>
