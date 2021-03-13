@@ -8,6 +8,6 @@ namespace GatewayDemo.AppService
     public interface ITransTestAppService
     {
         [Transaction]
-        Task<string> Create(string name);
+        Task<string> Delete(string name);
     }
 }
