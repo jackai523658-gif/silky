@@ -45,7 +45,7 @@ namespace Lms.Account.EntityFrameworkCore.Migrations
                         .HasColumnType("varchar(100) CHARACTER SET utf8mb4")
                         .HasMaxLength(100);
 
-                    b.Property<long>("UpdateBy")
+                    b.Property<long?>("UpdateBy")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("UpdateTime")
