@@ -31,6 +31,9 @@ namespace Lms.Account.Domain.Accounts
         [Column(TypeName = "decimal(10, 2)")]
         public decimal Balance { get; set; }
 
+        [Column(TypeName = "decimal(10, 2)")]
+        public decimal LockBalance { get; set; }
+
         public DateTime CreateTime { get; set; }
         
         public long? CreateBy { get; set; }

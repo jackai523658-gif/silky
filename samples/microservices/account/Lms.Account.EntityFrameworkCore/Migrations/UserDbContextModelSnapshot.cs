@@ -40,6 +40,9 @@ namespace Lms.Account.EntityFrameworkCore.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100) CHARACTER SET utf8mb4");
 
+                    b.Property<decimal>("LockBalance")
+                        .HasColumnType("decimal(10,2)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -54,6 +57,38 @@ namespace Lms.Account.EntityFrameworkCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Accounts");
+                });
+
+            modelBuilder.Entity("Lms.Account.Domain.Accounts.BalanceRecord", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("CreateBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<decimal>("OrderBalance")
+                        .HasColumnType("decimal(10,2)");
+
+                    b.Property<long>("OrderId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("PayStatus")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("UpdateBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("UpdateTime")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BalanceRecord");
                 });
 #pragma warning restore 612, 618
         }
