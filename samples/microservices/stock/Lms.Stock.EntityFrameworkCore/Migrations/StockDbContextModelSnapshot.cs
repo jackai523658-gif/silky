@@ -29,6 +29,9 @@ namespace Lms.Stock.EntityFrameworkCore.Migrations
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<int>("LockStock")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
