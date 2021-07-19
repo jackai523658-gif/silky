@@ -7,7 +7,7 @@ namespace Silky.Lms.Rpc.SkyApm.Diagnostics
 {
     public static class SkyWalkingBuilderExtensions
     {
-        public static SkyApmExtensions AddRpc(this SkyApmExtensions extensions)
+        public static SkyApmExtensions AddSilkyRpc(this SkyApmExtensions extensions)
         {
             if (extensions == null)
             {

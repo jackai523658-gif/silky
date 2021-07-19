@@ -12,7 +12,7 @@ namespace NormHostDemo
         {
             services.AddDatabaseAccessor(options => { options.AddDbPool<DemoDbContext>(); }, "NormHostDemo");
 
-            services.AddSkyAPM(extensions => { extensions.AddRpc(); });
+            services.AddSkyAPM(extensions => { extensions.AddSilkyRpc(); });
         }
 
         public int Order { get; } = 10;
