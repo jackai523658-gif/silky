@@ -45,7 +45,7 @@ namespace Silky.Account.Database.Migrations.Migrations
                     b.Property<decimal>("LockBalance")
                         .HasColumnType("decimal(10,2)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100) CHARACTER SET utf8mb4");
