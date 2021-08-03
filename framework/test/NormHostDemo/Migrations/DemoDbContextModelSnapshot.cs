@@ -31,6 +31,14 @@ namespace NormHostDemo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tests");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Address = "beijing",
+                            Name = "test"
+                        });
                 });
 #pragma warning restore 612, 618
         }
