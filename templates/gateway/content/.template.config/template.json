@@ -9,7 +9,7 @@
       ],
       "name": "Silky Gateway",
       "identity": "Silky.Template.Gateway",
-      "groupIdentity": "Silky.Template",
+      "groupIdentity": "Silky.Template.Gateway",
       "shortName": "silky.gateway",
       "tags": {
         "language": "C#",
