@@ -5,8 +5,6 @@ namespace Silky.Rpc.Runtime.Server
 {
     public interface IServiceProvider : ITransientDependency
     {
-        IReadOnlyList<ServiceEntry> GetEntries();
-
         IReadOnlyCollection<Service> GetServices();
     }
 }
