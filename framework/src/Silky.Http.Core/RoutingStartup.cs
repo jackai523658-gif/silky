@@ -17,6 +17,6 @@ namespace Silky.Http.Core
             application.UseRouting();
         }
 
-        public int Order { get; } = Int32.MinValue;
+        public int Order { get; } = 0;
     }
 }
