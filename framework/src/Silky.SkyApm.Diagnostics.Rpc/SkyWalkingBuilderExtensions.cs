@@ -1,8 +1,8 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Silky.SkyApm.Diagnostics.Abstraction.Factory;
 using Silky.SkyApm.Diagnostics.Rpc.Client;
-using Silky.SkyApm.Diagnostics.Rpc.Http;
 using Silky.SkyApm.Diagnostics.Rpc.Server;
 using SkyApm;
 using SkyApm.Utilities.DependencyInjection;
@@ -20,8 +20,7 @@ namespace Silky.SkyApm.Diagnostics.Rpc
 
             extensions.Services.AddSingleton<ITracingDiagnosticProcessor, RpcClientTracingDiagnosticProcessor>();
             extensions.Services.AddSingleton<ITracingDiagnosticProcessor, RpcServerTracingDiagnosticProcessor>();
-            extensions.Services.AddSingleton<ITracingDiagnosticProcessor, HttpTracingDiagnosticProcessor>();
-            extensions.Services.AddSingleton<ISilkySegmentContextFactory, SilkySegmentContextFactory>();
+            extensions.Services.TryAdd(ServiceDescriptor.Singleton<ISilkySegmentContextFactory, SilkySegmentContextFactory>());
             return extensions;
         }
     }
