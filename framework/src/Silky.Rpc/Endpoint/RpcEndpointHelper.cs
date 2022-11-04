@@ -129,7 +129,7 @@ namespace Silky.Rpc.Endpoint
             var rpcOptions = EngineContext.Current.GetOptionsSnapshot<RpcOptions>();
             var host = GetHostIp(rpcOptions.Host);
             var port = rpcOptions.Port;
-            var address = new RpcEndpoint(host, port, ServiceProtocol.Tcp);
+            var address = new RpcEndpoint(host, port, ServiceProtocol.Rpc);
             _ = _rpcEndpointCache.TryAdd("LocalTcpEndpoint", address);
             return address;
         }
